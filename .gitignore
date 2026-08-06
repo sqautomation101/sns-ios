@@ -1,0 +1,22 @@
+#new #.idea/
+#.idea/*
+.DS_Store
+
+# Maven target folder
+/target/
+
+# Maven target folder
+/allure-report/
+
+# IntelliJ project files (optional)
+*.iml
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# APK
+*.apk
