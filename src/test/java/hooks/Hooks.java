@@ -37,11 +37,11 @@ public class Hooks {
         dir.mkdirs();
 
         Properties props = new Properties();
-        props.setProperty("Platform", "Android");
-        props.setProperty("Device", "Pixel 5 - Android 13");
+        props.setProperty("Platform", "IOS");
+        props.setProperty("Device", "iPhone 15 - iOS 18.6");
         props.setProperty("Environment", "Stg");
         props.setProperty("Release", "24");
-        props.setProperty("Automation", "Appium");
+        props.setProperty("Automation", "XCUITest");
 
         try (FileOutputStream fos =
                      new FileOutputStream("target/allure-results/environment.properties")) {
@@ -100,17 +100,6 @@ public class Hooks {
             Allure.label("severity", "minor");
         }
     }
-
-//    private static TestContext testContext;
-//
-//    @Before(order = 0)
-//    public void setUpTestContext() {
-//        testContext = new TestContext();
-//    }
-//
-//    public static TestContext getTestContext() {
-//        return testContext;
-//    }
 
     @Before(order = 1)
     public void resetApp() throws Exception {
