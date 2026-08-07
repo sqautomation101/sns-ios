@@ -24,7 +24,7 @@ public class DriverManager {
     }
 
     public static AppiumDriver createDriver() {
-        String platform = System.getProperty("platform", "android");
+        String platform = System.getProperty("platform", "ios");
         System.out.println("🚀 System property 'platform': " + platform);
 
         platform = platform.toLowerCase();
@@ -94,16 +94,13 @@ public class DriverManager {
 
     public static IOSDriver createIOSDriver() {
         try {
-            String appPath = System.getProperty("user.dir") + "/src/test/resources/app/Runner.app";
-            File app = new File(appPath);
-            if (!app.exists()) throw new RuntimeException("❌ App not found: " + appPath);
 
             XCUITestOptions options = new XCUITestOptions()
                     .setPlatformName("iOS")
                     .setAutomationName("XCUITest")
-                    .setDeviceName("iPhone 15 Pro")
-                    .setPlatformVersion("17.5")
-                    .setApp(appPath)
+                    .setUdid("F2E8376C-3F3E-4A74-B8F7-68449BD6F167")
+                    .setDeviceName("iPhone 15")
+                    .setPlatformVersion("18.6")
                     .setNoReset(false)
                     .setFullReset(false) //do not reinstall app
                     .setResetOnSessionStartOnly(true) //wipes data
