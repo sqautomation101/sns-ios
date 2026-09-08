@@ -101,34 +101,43 @@ public class Hooks {
         }
     }
 
-    @Before(order = 1)
-    public void resetApp() throws Exception {
-
-        ProcessBuilder builder = new ProcessBuilder(
-                "adb",
-                "shell",
-                "pm",
-                "clear",
-                "com.dac.smacnshop");
-
-        Process process = builder.start();
-        process.waitFor();
-        System.out.println("🟢 Clearing App...");
-    }
+//    @Before(order = 1)
+//    public void resetApp() throws Exception {
+//
+//        ProcessBuilder builder = new ProcessBuilder(
+//                "adb",
+//                "shell",
+//                "pm",
+//                "clear",
+//                "com.dac.smacnshop");
+//
+//        Process process = builder.start();
+//        process.waitFor();
+//        System.out.println("🟢 Clearing App...");
+//    }
 
     // --------------------- SCENARIO HOOKS ---------------------
-    @Before(order = 2)
-    public void setUpDriver(Scenario scenario) throws IOException, InterruptedException {
+    @Before(order = 1)
+    public void setUpDriver(Scenario scenario)
+            throws IOException, InterruptedException {
+
         System.out.println("🟢 Setting up Driver...");
+
         if (scenario.getSourceTagNames().contains("@ios")) {
+
             driver = DriverManager.createIOSDriver();
-            pageManager = new PageManager(driver);
+
         } else if (scenario.getSourceTagNames().contains("@android")) {
+
             driver = DriverManager.createAndroidDriver();
-            pageManager = new PageManager(driver);
+
         } else {
             throw new RuntimeException("❌ No platform tag (@ios or @android)");
         }
+
+        pageManager = new PageManager(driver);
+
+        System.out.println("🟢 Driver ready: " + driver.getSessionId());
     }
 
     @Before(order = 3)
@@ -179,17 +188,14 @@ public class Hooks {
     @After(order = 1)
     public void tearDown() {
 
+        System.out.println("🔴 Starting teardown...");
+
         try {
-            if (driver != null) {
-                driver.quit();
-                Thread.sleep(2000);
-            }
-        } catch (Exception ignored) {}
-
-        driver = null;
-        pageManager = null;
-
-        System.out.println("🟢 Driver cleanup...");
+            DriverManager.quitDriver();
+        } finally {
+            pageManager = null;
+            System.out.println("🟢 Teardown completed.");
+        }
     }
 
 
