@@ -16,8 +16,8 @@ public final class LoginLocators {
             ".instance(2)");
     public static final By SPLASH_SCR_IOS = AppiumBy.xpath("//XCUIElementTypeApplication[@name=\"SMAC&SHOP\"]/XCUIElementTypeWindow[2]/XCUIElementTypeOther/XCUIElementTypeOther");
 
-    public static final By USERNAME_FIELD = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"login_username_field\"]");
-    public static final By PASSWORD_FIELD = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"login_password_field\"]");
+    public static final By USERNAME_FIELD = AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"login_username_field\"]");
+    public static final By PASSWORD_FIELD = AppiumBy.xpath("//XCUIElementTypeTextField[@name=\"login_password_field\"]");
     public static final By TOBECLEAR_PW = AppiumBy.xpath("//*[@text = '••••' and @resource-id='login_password_field']");
     public static final By LOGIN_BTN_IOS = AppiumBy.accessibilityId("login_button");
     public static final By LOGIN_BTN_AND = AppiumBy.accessibilityId("login_button");
