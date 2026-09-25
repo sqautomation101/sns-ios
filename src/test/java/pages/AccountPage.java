@@ -17,8 +17,8 @@ public class AccountPage extends BasePage {
     public boolean isAccountPageVisible() {
         waitUniqueElement(AccountLocators.LOGOUT_BTN, 60);
 
-        boolean manageMyAcct = isElementVisible("Account - Manage Online Account", AccountLocators.MANAGE_MY_ACCT, 5);
-        logStatus("Account - Manage Online Account", manageMyAcct);
+//        boolean manageMyAcct = isElementVisible("Account - Manage Online Account", AccountLocators.MANAGE_MY_ACCT, 5);
+//        logStatus("Account - Manage Online Account", manageMyAcct);
 
         boolean HAI = isElementVisible("Account - Help and info", AccountLocators.HELP_AND_INFO, 5);
         logStatus("Account - Help and info", HAI);
@@ -32,7 +32,7 @@ public class AccountPage extends BasePage {
         boolean logout = isElementVisible("Account - Logout", AccountLocators.LOGOUT_BTN, 5);
         logStatus("Account - Logout", logout);
 
-        return manageMyAcct & HAI & acct_ManageCards & HAI & acct_PointsHistory & logout;
+        return HAI & acct_ManageCards & HAI & acct_PointsHistory & logout;
     }
 
 

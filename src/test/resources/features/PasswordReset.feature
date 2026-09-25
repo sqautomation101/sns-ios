@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Password Reset
   Scenario: Error message is displayed for invalid email format in Password Reset
   Scenario: Error message is displayed for invalid mobile number format in Password Reset

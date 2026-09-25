@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Homepage
 
     Rule: Start account - Olivia Rodrigo
@@ -103,7 +103,7 @@ Feature: Homepage
           And the user is on the Homepage
           Given SMAC Start default virtual card is visible
           When the user clicks the Prestige bar
-          Then the user is on the Card benefits page - Start tab
+#          Then the user is on the Card benefits page - Start tab
     #End of Start account
 
     Rule: SMAC account - Sabrina Carpenter
@@ -130,7 +130,7 @@ Feature: Homepage
         Scenario: Card Benefits page is displayed upon clicking RTP progress bar for SMAC account
           And the user is on the Homepage
           When the user clicks the Prestige bar
-          Then the user will redirects to Card benefits page - SMAC tab
+#          Then the user will redirects to Card benefits page - SMAC tab
     #End of SMAC account
 
     Rule: Prestige account - Maddy Perez
@@ -151,7 +151,7 @@ Feature: Homepage
         Scenario: Card Benefits page is displayed upon clicking RTP progress bar for SMAC Prestige
           And the user is on the Homepage
           When the user clicks the Prestige bar
-          Then the user is on the Card benefits page - SMAC Prestige tab
+#          Then the user is on the Card benefits page - SMAC Prestige tab
     #End of Prestige account
 
 

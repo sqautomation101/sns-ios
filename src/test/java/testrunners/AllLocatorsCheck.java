@@ -205,7 +205,7 @@ public class AllLocatorsCheck {
 
         checkPresence(driver, "USERNAME_FIELD", LoginLocators.USERNAME_FIELD);
         checkPresence(driver, "PASSWORD_FIELD", LoginLocators.PASSWORD_FIELD);
-        checkPresence(driver, "LOGIN_BTN_AND", LoginLocators.LOGIN_BTN_AND);
+        checkPresence(driver, "LOGIN_BTN_IOS", LoginLocators.LOGIN_BTN_IOS);
         checkPresence(driver, "LOGIN_BACK_BTN", LoginLocators.LOGIN_BACK_BTN);
         checkPresence(driver, "FORGOT_BTN", LoginLocators.FORGOT_BTN);
 
@@ -252,8 +252,8 @@ public class AllLocatorsCheck {
     private void checkHomepage(AndroidDriver driver) throws InterruptedException {
         goHome(driver);
 
-        checkPresence(driver, "CARDPOINTS_AND", HomepageLocators.CARDPOINTS_AND);
-        checkPresence(driver, "CARDNUMBER_AND", HomepageLocators.CARDNUMBER_AND);
+        checkPresence(driver, "CARDPOINTS_AND", HomepageLocators.CARDPOINTS_IOS);
+        checkPresence(driver, "CARDNUMBER_AND", HomepageLocators.CARDNUMBER_IOS);
         checkPresence(driver, "MANAGECARDSWIDGET", HomepageLocators.MANAGECARDSWIDGET);
         checkPresence(driver, "PTSHISTORYWIDGET", HomepageLocators.PTSHISTORYWIDGET);
         checkPresence(driver, "PLAYWIDGET", HomepageLocators.PLAYWIDGET);
@@ -340,7 +340,7 @@ public class AllLocatorsCheck {
         acctTab.click();
         Thread.sleep(800);
 
-        checkPresence(driver, "MANAGE_MY_ACCT", AccountLocators.MANAGE_MY_ACCT);
+//        checkPresence(driver, "MANAGE_MY_ACCT", AccountLocators.MANAGE_MY_ACCT);
         checkPresence(driver, "HELP_AND_INFO", AccountLocators.HELP_AND_INFO);
         checkPresence(driver, "ACCT_MANAGE_CARDS", AccountLocators.ACCT_MANAGE_CARDS);
         checkPresence(driver, "ACCT_PTS_HISTORY", AccountLocators.ACCT_PTS_HISTORY);

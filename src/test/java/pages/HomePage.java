@@ -22,7 +22,7 @@ public class HomePage extends BasePage {
 
 
     public boolean isHomepageDisplayed(){
-        waitUniqueElement(HomepageLocators.refer_hdr, 60);
+        waitUniqueElement(HomepageLocators.refer_hdr, 30);
 
         boolean rfr_title = isElementVisible("Referal - Title", HomepageLocators.refer_hdr, 10);
         logStatus("Referal - Title", rfr_title);
@@ -47,8 +47,8 @@ public class HomePage extends BasePage {
     public boolean isMainCardWidgetDisplayed(){
         waitUniqueElement(HomepageLocators.MANAGECARDSWIDGET, 30);
 
-        WebElement By_cardNumber = waitHelper.waitForVisibility_Bylocator(HomepageLocators.CARDNUMBER_AND, 15);
-        WebElement By_cardPoints = waitHelper.waitForVisibility_Bylocator(HomepageLocators.CARDPOINTS_AND, 15);
+        WebElement By_cardNumber = waitHelper.waitForVisibility_Bylocator(HomepageLocators.CARDNUMBER_IOS, 15);
+        WebElement By_cardPoints = waitHelper.waitForVisibility_Bylocator(HomepageLocators.CARDPOINTS_IOS, 15);
 
         boolean cn = isElementVisible("Card number", By_cardNumber, 15);
         logStatus("Card - card number", cn);
@@ -109,11 +109,11 @@ public class HomePage extends BasePage {
 
     public void clickCardNumber() {
         isElementVisible("Prismic", HomepageLocators.PRISMIC, 30);
-        tap("Card number", HomepageLocators.CARDNUMBER_AND, 10);
+        tap("Card number", HomepageLocators.CARDNUMBER_IOS, 10);
     }
 
     public String extractCardNumber() {
-        return card.extractCardNumber(HomepageLocators.CARDNUMBER_AND, 4);
+        return card.extractCardNumber(HomepageLocators.CARDNUMBER_IOS, 4);
     }
 
 
@@ -162,7 +162,7 @@ public class HomePage extends BasePage {
 
 
     public void clickRTP() {
-        tap("RTP btn", HomepageLocators.RTP_MAINTAIN, 30);
+        tap("RTP btn", HomepageLocators.RTP_ORIGINAL, 30);
     }
 
 

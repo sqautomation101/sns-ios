@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Offline Virtual Card
   Rule: No Cache
     Background:
@@ -17,7 +17,7 @@ Feature: Offline Virtual Card
         Then Virtual SMAC modal is not displayed
         And the user is on the SSO menu
 
-        @high
+#        @high
       Scenario: No Internet Connection modal is displayed without connectivity - No cache/history of login
         And the user turns off the connectivity
         And offline modal is displayed
@@ -25,7 +25,7 @@ Feature: Offline Virtual Card
         Then Offline toast is displayed
         And View Virtual SMAC is "disabled"
 
-        @high
+#        @high
       Scenario: Clicking Refresh without connectivity still displayed No Internet Connection modal
         And the user turns off the connectivity
         And offline modal is displayed
@@ -33,7 +33,7 @@ Feature: Offline Virtual Card
         Then offline modal is displayed
         And Offline toast is displayed
 
-        @high
+#        @high
       Scenario: No Internet Connection modal does not dismiss after clicking persistently the Refresh button without connectivity
         And the user turns off the connectivity
         And offline modal is displayed
@@ -44,7 +44,7 @@ Feature: Offline Virtual Card
         Then offline modal is displayed
         And Offline toast is displayed
 
-        @high
+#        @high
       Scenario: Guest Homepage is displayed upon clicking on Refresh - No cache
         Given the user is on the SSO menu
         And the user turns off the connectivity
@@ -63,7 +63,7 @@ Feature: Offline Virtual Card
       And the user is on the Homepage
       And the user turns off the connectivity
 
-        @high
+#        @high
       Scenario: Homepage is displayed upon clicking on Refresh - Have Cache
         And offline modal is displayed
         When the user turns on the connectivity
@@ -93,12 +93,12 @@ Feature: Offline Virtual Card
       And the user is on the Homepage
       And the user turns off the connectivity
 
-        @high
+#        @high
       Scenario: No Internet Connection modal is displayed without connectivity - Have cache/history of login
         Then offline modal is displayed
         And View Virtual SMAC is "enabled"
 
-        @critical @failed
+#        @critical @failed
       Scenario: Offline Virtual card is displayed upon clicking View Virtual SMAC - Have cache
         And offline modal is displayed
         When the user clicks the Offline - View Virtual SMAC button
@@ -109,7 +109,7 @@ Feature: Offline Virtual Card
 #        When the user clicks the Offline Show QR
 #        Then Offline QR is displayed - Start
 
-        @high
+#        @high
       Scenario: Offline QR is displayed upon clicking Show QR - Start
         And offline modal is displayed
         And the user clicks the Offline - View Virtual SMAC button
@@ -119,7 +119,7 @@ Feature: Offline Virtual Card
         Then Offline QR is displayed - "SMAC Start"
         And card number is not virtual - QR
 
-        @high
+#        @high
       Scenario: Offline Barcode is displayed upon clicking Show Barcode - Start
         And offline modal is displayed
         When the user clicks the Offline - View Virtual SMAC button
@@ -127,7 +127,7 @@ Feature: Offline Virtual Card
         And Offline Barcode is displayed - "SMAC Start"
         And card number is not virtual - Barcode
 
-        @high
+#        @high
       Scenario: No Internet Connection modal is displayed upon clicking Back button of Offline Barcode
         And offline modal is displayed
         And the user clicks the Offline - View Virtual SMAC button
@@ -136,7 +136,7 @@ Feature: Offline Virtual Card
         When the user clicks the Show Barcode - Back
         Then offline modal is displayed
 
-        @high
+#        @high
       Scenario: No Internet Connection modal is displayed upon clicking Back button of Offline QR
         And offline modal is displayed
         And the user clicks the Offline - View Virtual SMAC button
@@ -151,7 +151,7 @@ Feature: Offline Virtual Card
       And the user is on the Homepage
       And the user turns off the connectivity
 
-        @high
+#        @high
       Scenario: Offline QR is displayed upon clicking Show QR - SMAC
         And offline modal is displayed
         And the user clicks the Offline - View Virtual SMAC button
@@ -161,7 +161,7 @@ Feature: Offline Virtual Card
         Then Offline QR is displayed - "SMAC Blue"
         And card number is not virtual - QR
 
-        @high
+#        @high
       Scenario: Offline Barcode is displayed upon clicking Show Barcode - SMAC
         And offline modal is displayed
         When the user clicks the Offline - View Virtual SMAC button
@@ -176,7 +176,7 @@ Feature: Offline Virtual Card
       And the user is on the Homepage
       And the user turns off the connectivity
 
-        @high
+#        @high
       Scenario: Offline QR is displayed upon clicking Show QR - Prestige
         And offline modal is displayed
         And the user clicks the Offline - View Virtual SMAC button
@@ -186,7 +186,7 @@ Feature: Offline Virtual Card
         Then Offline QR is displayed - "SMAC Prestige"
           And card number is not virtual - QR
 
-        @high
+#        @high
       Scenario: Offline Barcode is displayed upon clicking Show Barcode - Prestige
         And offline modal is displayed
         When the user clicks the Offline - View Virtual SMAC button

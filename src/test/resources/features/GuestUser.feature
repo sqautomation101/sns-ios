@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Guest user
   Background:
     Given the user is on the SSO menu
@@ -43,9 +43,3 @@ Feature: Guest user
       And the user is on the guest homepage
       When the guest user clicks the account icon
       Then the user is on the SSO menu
-
-#      @high @deferred
-#    Scenario: SSO Menu is displayed after clicking Shop navigation
-#      And the user is on the guest homepage
-#      When the guest user clicks the shop icon
-#      Then the user is on the Shop page

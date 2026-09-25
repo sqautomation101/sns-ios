@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Bottom Navigation
   Rule: Start account - Olivia Rodrigo
     Background:
@@ -11,12 +11,12 @@ Feature: Bottom Navigation
         When the user clicks the vouchers navigation
         Then the user is on the vouchers page
 
-        @high @failed
+        @high
         Scenario: QR page is displayed upon clicking QR navigation
         When the user clicks the QR - Start
         Then the user is on the QAS - QR Page - Start
 
-        @medium @failed
+        @medium
       Scenario: SMAC Start as highest tier is displayed on QR and Scan page
         Then the QR button is reflected as "Start" tier
         When the user clicks the QR - Start

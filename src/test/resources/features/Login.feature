@@ -1,8 +1,8 @@
-@android
+@ios
 Feature: Login
   Background:
     Given the user is on the SSO menu
-    When the user clicks the Login button - SSO
+    And the user clicks the Login button - SSO
     And the user is on the Login page
 
       @high 

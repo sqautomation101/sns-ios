@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Account
   Background:
     Given the user is on the SSO menu

@@ -3,53 +3,53 @@
 <suite name="[Regression] Release 24 SNS Automation Suite - Android">
     <parameter name="platform" value="android"/>
 
-<!--    <test name="SNS - SSO">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.SSOMenuTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - SSO">
+        <classes>
+            <class name="testrunners.SSOMenuTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Login">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.LoginTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Login">
+        <classes>
+            <class name="testrunners.LoginTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Homepage">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.HomepageTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Homepage">
+        <classes>
+            <class name="testrunners.HomepageTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Guest user">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.GuestUserTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Guest user">
+        <classes>
+            <class name="testrunners.GuestUserTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Points History">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.PointsHistoryTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Points History">
+        <classes>
+            <class name="testrunners.PointsHistoryTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Bottom Nav">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.BottomNavTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Bottom Nav">
+        <classes>
+            <class name="testrunners.BottomNavTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Account">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.AccountTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Account">
+        <classes>
+            <class name="testrunners.AccountTestRunner"/>
+        </classes>
+    </test>
 
-<!--    <test name="SNS - Inbox">-->
-<!--        <classes>-->
-<!--            <class name="testrunners.InboxTestRunner"/>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="SNS - Inbox">
+        <classes>
+            <class name="testrunners.InboxTestRunner"/>
+        </classes>
+    </test>
 
 <!--    <test name="SNS - Road to Prestige">-->
 <!--        <classes>-->
@@ -57,23 +57,23 @@
 <!--        </classes>-->
 <!--    </test>-->
 
-    <test name="SNS - Manage Card">
-        <classes>
-            <class name="testrunners.ManageCardsTestRunner"/>
-        </classes>
-    </test>
+<!--    <test name="SNS - Manage Card">-->
+<!--        <classes>-->
+<!--            <class name="testrunners.ManageCardsTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="SNS - Offline Virtual Account">
-        <classes>
-            <class name="testrunners.OfflineVirtualCardTestRunner"/>
-        </classes>
-    </test>
+<!--    <test name="SNS - Offline Virtual Account">-->
+<!--        <classes>-->
+<!--            <class name="testrunners.OfflineVirtualCardTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="SNS - QR and Scan">
-        <classes>
-            <class name="testrunners.QRAndScanTestRunner"/>
-        </classes>
-    </test>
+<!--    <test name="SNS - QR and Scan">-->
+<!--        <classes>-->
+<!--            <class name="testrunners.QRAndScanTestRunner"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 <!--    <test name="SNS - Card Linking">-->
 <!--        <classes>-->

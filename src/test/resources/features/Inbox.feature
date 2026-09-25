@@ -1,10 +1,10 @@
-@android
+@ios
 Feature: Inbox
   Rule: Start Account - Olivia Rodrigo
     Background:
       Given the user is on the SSO menu
       And the user clicks on SSO Login button
-      And the user logs in using valid mobile number and password - Prestige
+      And the user logs in using valid mobile number and password - Points History
       And the user is on the Homepage
 
         @low
@@ -36,7 +36,7 @@ Feature: Inbox
         And the inbox title matches from outer inbox screen
         And the inbox body matches from outer inbox screen
 
-        @low @failed
+        @low
       Scenario: Outer Inbox is displayed upon clicking on Back button from Inner Inbox page
         And the user clicks the inbox navigation
         And the user is on the inbox page
