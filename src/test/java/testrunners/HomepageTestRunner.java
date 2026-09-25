@@ -12,6 +12,7 @@ import org.testng.annotations.DataProvider;
                 "rerun:target/rerun-txt/initial/rerun-homepage.txt"   // <-- automatically logs failed scenarios
                 ,
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"},
+        tags = "@critical or @high",
         monochrome = true
 )
 
