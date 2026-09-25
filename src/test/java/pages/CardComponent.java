@@ -28,6 +28,17 @@ public class CardComponent extends BasePage {
         return cardNumber;
     }
 
+    public String extractFromLabel(String elementName, By toBeExtracted, String delimiter, Integer index) {
+        WebElement cardElement = waitForVisibility(elementName, toBeExtracted, 15);
+        String contentDesc = cardElement.getAttribute("label");
+        //debug contentdesc
+        //System.out.println("Full content-desc: " + contentDesc);
+        String cardNumber = contentDesc.split(delimiter)[index].trim();
+
+        System.out.println("Extracted value from content desc: " + cardNumber);
+        return cardNumber;
+    }
+
 
     public String extractCardNumber(By cardNumberLocator, Integer indexCardNo) {
         WebElement cardElement = waitForVisibility("Card number", cardNumberLocator, 30);
@@ -66,7 +77,7 @@ public class CardComponent extends BasePage {
      * @return The extracted part as String
      */
     public String extractCardPart(By cardNumberLocator, String delimiterContentDesc, String delimiterCN, int indexCN) {
-        String cn = extractFromContentDesc("Card number", cardNumberLocator, delimiterContentDesc, 1);
+        String cn = extractFromLabel("Card number", cardNumberLocator, delimiterContentDesc, 1);
 
         // fallback if delimiter not present
         String[] parts = cn.contains(delimiterCN)

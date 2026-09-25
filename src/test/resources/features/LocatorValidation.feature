@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Locator Validation
 
   Scenario: Validate SSO Menu Locators

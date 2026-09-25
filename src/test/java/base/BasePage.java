@@ -5,12 +5,14 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.*;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.*;
 
 import java.time.Duration;
+import java.util.Map;
 
 
 public class BasePage {
@@ -27,29 +29,35 @@ public class BasePage {
         this.driver = driver;
 
         // Utilities
-        this.waitHelper = new UtilWait(driver, 20);
-        this.scrollHelper = new UtilScroll(driver, 20);
+        this.waitHelper = new UtilWait(driver, 15);
+        this.scrollHelper = new UtilScroll(driver, 15);
         this.networkHelper = new UtilNetwork(driver);
 
         // PageFactory
         PageFactory.initElements(
-                new AppiumFieldDecorator(driver, Duration.ofSeconds(20)), this);
+                new AppiumFieldDecorator(driver, Duration.ofSeconds(15)), this);
     }
 
-    protected String getContentDesc(By locator){
+    protected String getContentDesc(By locator) {
         waitUniqueElement(locator, 5);
         return driver.findElement(locator).getAttribute("contentDescription");
     }
 
-    protected String getText(By locator){
+    protected String getText(By locator) {
         waitUniqueElement(locator, 5);
         return driver.findElement(locator).getAttribute("text");
+    }
+
+    protected String getLabel(By locator) {
+        waitUniqueElement(locator, 5);
+//        System.out.println("Label:   " + driver.findElement(locator).getAttribute("label"));
+        return driver.findElement(locator).getAttribute("label");
     }
 
     public WebElement waitForVisibility(String name, By locator, int timeout) {
 
         return new WebDriverWait(driver, Duration.ofSeconds(timeout))
-                .pollingEvery(Duration.ofMillis(300))
+                .pollingEvery(Duration.ofMillis(500))
                 .ignoring(StaleElementReferenceException.class)
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
@@ -57,7 +65,7 @@ public class BasePage {
     protected WebElement waitForClickable(String elementName, By locator, int timeoutInSeconds) {
 
         return new WebDriverWait(driver, Duration.ofSeconds(timeoutInSeconds))
-                .pollingEvery(Duration.ofMillis(300))
+                .pollingEvery(Duration.ofMillis(500))
                 .ignoring(StaleElementReferenceException.class)
                 .ignoring(NoSuchElementException.class)
                 .until(ExpectedConditions.elementToBeClickable(locator));
@@ -149,15 +157,8 @@ public class BasePage {
     }
 
     public void tap(String name, By locator, int timeout) {
-        waitUniqueElement(locator, timeout);
         WebElement element = waitForClickable(name, locator, timeout);
         element.click();
-        System.out.println("📱 Clicked: " + name);
-    }
-
-    public void tap(String name, WebElement element, int timeout) {
-        WebElement clickable = waitForClickable(name, element, timeout);
-        clickable.click();
         System.out.println("📱 Clicked: " + name);
     }
 
@@ -167,13 +168,6 @@ public class BasePage {
         System.out.println("📱 Clicked: " + name);
     }
 
-    protected void type(String name, WebElement element, int timeout, String input) {
-        WebElement el = waitForClickable(name, element, timeout);
-        el.clear();
-        el.sendKeys(input);
-        System.out.println("✏️ Typed: " + input);
-    }
-
     protected void type_2(String name, By locator, int timeout, String input) {
         WebElement el = waitForClickable(name, locator, timeout);
         el.sendKeys(input);
@@ -181,11 +175,11 @@ public class BasePage {
     }
 
     protected void type(String name, By locator, int timeout, String input) {
-        waitUniqueElement(locator, timeout);
+//        waitUniqueElement(locator, timeout);
         WebElement el = waitForClickable(name, locator, timeout);
         el.clear();
         el.sendKeys(input);
-        System.out.println("✏️ Typed: " + input);
+        System.out.println("✏️ Typed: " + name);
     }
 
     protected void type_noClear(String name, By locator, int timeout, String input) throws InterruptedException {
@@ -326,7 +320,7 @@ public class BasePage {
         return attributeValue;
     }
 
-    public void native_back(){
+    public void native_back() {
         driver.navigate().back();
     }
 
@@ -358,4 +352,7 @@ public class BasePage {
             return false;
         }
     }
+
+
+
 }

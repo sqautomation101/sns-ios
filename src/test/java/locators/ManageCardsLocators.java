@@ -10,9 +10,9 @@ public final class ManageCardsLocators {
     //LOCATORS
     public static final By MC_BACK_BTN = AppiumBy.accessibilityId("app_bar_back_button");
     public static final By MC_TRANSFER_PTS = AppiumBy.accessibilityId("manage_cards_transfer_points_button");
-    public static final By MC_BLOCK_CARD = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_block_card_button')]");
+    public static final By MC_BLOCK_CARD = AppiumBy.accessibilityId("manage_cards_block_card_button");
     public static final By MC_SHOW_CARD = AppiumBy.accessibilityId("manage_cards_show_cards_button");
-    public static final By MC_LINK_CARD_BTN = AppiumBy.accessibilityId("manage_cards_linked_add_card_button");
+    public static final By MC_LINK_CARD_BTN = AppiumBy.xpath("//XCUIElementTypeWindow/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeOther[2]/XCUIElementTypeOther[3]/XCUIElementTypeOther[2]/XCUIElementTypeOther/XCUIElementTypeOther[4]/XCUIElementTypeOther");
     public static final By MC_LINK_CARD_BTN_EMPTY = AppiumBy.accessibilityId("manage_cards_empty_link_card_button");
     public static final By MC_LINKED_CARD_COUNTER = AppiumBy.xpath("//*[contains(@content-desc,'manage_cards_linked_count')]");
     public static final By MC_INFO_ICON = AppiumBy.accessibilityId("manage_cards_info_tooltip");

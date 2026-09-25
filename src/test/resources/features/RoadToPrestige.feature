@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Road to Prestige
   Rule: Start account - Olivia Rodrigo
     Background:
@@ -100,7 +100,7 @@ Feature: Road to Prestige
           Then Claim Prestige button overlay is visible
 
         Scenario: Claim Prestige Button Overlay is NOT visible on Expired Prestige
-          When the user swipes to expired prestige card
+          When the user swipes to expired card
           Then Claim Prestige button overlay is not visible
 
         Scenario: Claim Prestige Button Overlay is NOT visible on Active Prestige

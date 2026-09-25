@@ -50,7 +50,7 @@ public class InboxPage extends BasePage {
     public String getInboxTitle() {
         waitUniqueElement(InboxLocators.INBOX_NOTIF_1_TITLE, 15);
 
-        String rawContentDesc = getContentDesc(InboxLocators.INBOX_NOTIF_1_TITLE);
+        String rawContentDesc = getLabel(InboxLocators.INBOX_NOTIF_1_TITLE);
 
         int start = rawContentDesc.indexOf(",") + 1;
         String inboxTitle = rawContentDesc.substring(start).trim();
@@ -64,7 +64,7 @@ public class InboxPage extends BasePage {
     public String getInboxBody() {
         waitUniqueElement(InboxLocators.INBOX_NOTIF_1_BODY, 15);
 
-        String rawContentDesc = getContentDesc(InboxLocators.INBOX_NOTIF_1_BODY);
+        String rawContentDesc = getLabel(InboxLocators.INBOX_NOTIF_1_BODY);
 
         int start = rawContentDesc.indexOf(",") + 1;
         String inboxBody = rawContentDesc.substring(start).trim();
@@ -78,7 +78,7 @@ public class InboxPage extends BasePage {
     public String getInboxTitle_inner() {
         waitUniqueElement(InboxLocators.INBOX_INNER_HDR, 15);
 
-        String rawContentDesc = getContentDesc(InboxLocators.INBOX_INNER_HDR);
+        String rawContentDesc = getLabel(InboxLocators.INBOX_INNER_HDR);
 
         int start = rawContentDesc.indexOf(",") + 1;
         String inboxTitle = rawContentDesc.substring(start).trim();
@@ -92,7 +92,7 @@ public class InboxPage extends BasePage {
     public String getInboxBody_inner() {
         waitUniqueElement(InboxLocators.INBOX_INNER_BODY, 15);
 
-        String rawContentDesc = getContentDesc(InboxLocators.INBOX_INNER_BODY);
+        String rawContentDesc = getLabel(InboxLocators.INBOX_INNER_BODY);
 
         int start = rawContentDesc.indexOf(",") + 1;
         String inboxBody = rawContentDesc.substring(start).trim();

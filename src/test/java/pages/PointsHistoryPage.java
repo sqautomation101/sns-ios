@@ -153,21 +153,21 @@ public class PointsHistoryPage extends BasePage {
     public String getPtsHistoryDate(String tranType){
         switch (tranType){
             case "awd-LYBC":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_LYBC_AWD_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_LYBC_AWD_DATE);
             case "awd-ACE":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_ACE_AWD_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_ACE_AWD_DATE);
             case "awd-TK":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_TK_AWD_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_TK_AWD_DATE);
             case "awd-MOM":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_MOM_AWD_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_MOM_AWD_DATE);
             case "red-ACE":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_ACE_RED_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_ACE_RED_DATE);
             case "red-TK":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_TK_RED_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_TK_RED_DATE);
             case "red-MOM":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_MOM_RED_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_MOM_RED_DATE);
             case "red-LYBC":
-                return card.extractContentDesc_2(PointsHistoryLocators.PH_ITEM_LYBC_RED_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_LYBC_RED_DATE);
             default:
                 throw new IllegalArgumentException("Unknown transaction type: " + tranType);
         }
@@ -178,33 +178,34 @@ public class PointsHistoryPage extends BasePage {
         switch (tranType){
             case "Redemption":
             case "red-ACE":
-                return card.extractFromContentDesc("Redemption - ACE title", PointsHistoryLocators.PH_ITEM_RED_TITLE, ",", 1);
+                return card.extractFromLabel("Redemption - ACE Title", PointsHistoryLocators.PH_ITEM_RED_TITLE, ",", 1
+                );
                 //System.out.println(transactionTitle);
             case "Awarding":
             case "awd-ACE":
-                return card.extractFromContentDesc("Awarding - ACE title", PointsHistoryLocators.PH_ITEM_AWD_TITLE, ",", 1);
+                return card.extractFromLabel("Awarding - ACE Title", PointsHistoryLocators.PH_ITEM_AWD_TITLE, ",", 1);
             case "awd-TK":
-                return card.extractFromContentDesc("Awarding - TK title", PointsHistoryLocators.PH_ITEM_AWD_TK_TITLE, ",", 1);
+                return card.extractFromLabel("Awarding - TK Title", PointsHistoryLocators.PH_ITEM_AWD_TK_TITLE, ",", 1);
             case "awd-MOM":
-                return card.extractFromContentDesc("Awarding - MOM title", PointsHistoryLocators.PH_ITEM_AWD_MOM_TITLE, ",", 1);
+                return card.extractFromLabel("Awarding - MOM Title", PointsHistoryLocators.PH_ITEM_AWD_MOM_TITLE, ",", 1);
             case "awd-LYBC":
-                return card.extractFromContentDesc("Awarding - LYBC title", PointsHistoryLocators.PH_ITEM_AWD_LYBC_TITLE, ",", 1);
+                return card.extractFromLabel("Awarding - LYBC Title", PointsHistoryLocators.PH_ITEM_AWD_LYBC_TITLE, ",", 1);
             case "red-LYBC":
-                return card.extractFromContentDesc("Redemption - LYBC title", PointsHistoryLocators.PH_ITEM_RED_LYBC_TITLE, ",", 1);
+                return card.extractFromLabel("Redemption - LYBC Title", PointsHistoryLocators.PH_ITEM_RED_LYBC_TITLE, ",", 1);
             case "red-TK":
-                return card.extractFromContentDesc("Redemption - TK title", PointsHistoryLocators.PH_ITEM_RED_TK_TITLE, ",", 1);
+                return card.extractFromLabel("Redemption - TK Title", PointsHistoryLocators.PH_ITEM_RED_TK_TITLE, ",", 1);
             case "red-MOM":
-                return card.extractFromContentDesc("Redemption - MOM title", PointsHistoryLocators.PH_ITEM_RED_MOM_TITLE, ",", 1);
+                return card.extractFromLabel("Awarding - MOM Title", PointsHistoryLocators.PH_ITEM_RED_MOM_TITLE, ",", 1);
             case "BDOR to SMAC":
-                return card.extractFromContentDesc("BDOR to SMAC title", PointsHistoryLocators.PH_ITEM_BDORTOSMAC_TITLE, ",", 1);
+                return card.extractFromLabel("BDOR to SMAC - Title", PointsHistoryLocators.PH_ITEM_BDORTOSMAC_TITLE, ",", 1);
             case "PAL to SMAC":
-                return card.extractFromContentDesc("PAL to SMAC title", PointsHistoryLocators.PH_ITEM_PALTOSMAC_TITLE, ",", 1);
+                return card.extractFromLabel("PAL to SMAC - Title", PointsHistoryLocators.PH_ITEM_PALTOSMAC_TITLE, ",", 1);
             case "SMAC to PAL":
-                return card.extractFromContentDesc("SMAC to PAL title", PointsHistoryLocators.PH_ITEM_SMACTOPAL_TITLE, ",", 1);
+                return card.extractFromLabel("SMAC to PAL - Title", PointsHistoryLocators.PH_ITEM_SMACTOPAL_TITLE, ",", 1);
             case "AIR ASIA to SMAC":
-                return card.extractFromContentDesc("AIR ASIA to SMAC title", PointsHistoryLocators.PH_ITEM_AIRTOSMAC_TITLE, ",", 1);
+                return card.extractFromLabel("AIR ASIA to SMAC - Title", PointsHistoryLocators.PH_ITEM_AIRTOSMAC_TITLE, ",", 1);
             case "SMAC to AIR ASIA":
-                return card.extractFromContentDesc("SMAC to AIR ASIA title", PointsHistoryLocators.PH_ITEM_SMACTOAIR_TITLE, ",", 1);
+                return card.extractFromLabel("SMAC to AIR ASIA - Title", PointsHistoryLocators.PH_ITEM_SMACTOAIR_TITLE, ",", 1);
 
             default:
                 throw new IllegalArgumentException("Unknown transaction type: " + tranType);
@@ -213,14 +214,14 @@ public class PointsHistoryPage extends BasePage {
 
 
     public String getPtsHistoryTitle_Inner(){
-        String transactionTitle = card.extractFromContentDesc("Inner - Dynamic Title", PointsHistoryLocators.PH_TRANS_DET_DYNAMIC_TITLE, ",", 1);
+        String transactionTitle = card.extractFromLabel("Awarding", PointsHistoryLocators.PH_TRANS_DET_DYNAMIC_TITLE, "\n", 1);
         //System.out.println(transactionTitle);
         return transactionTitle;
     }
 
 
     public String getPtsHistoryPts_Inner(){
-        String transactionPts = card.extractFromContentDesc("Inner - Points", PointsHistoryLocators.PH_TRANS_DET_POINTS_VAL, ",", 1);
+        String transactionPts = card.extractFromLabel("Points", PointsHistoryLocators.PH_TRANS_DET_POINTS_VAL, "\n", 1);
         cleanPositivePointsValue(transactionPts);
         //System.out.println(transactionTitle);
         return transactionPts;
@@ -228,7 +229,7 @@ public class PointsHistoryPage extends BasePage {
 
 
     public String getPtsHistoryDate_Inner(){
-        String transactionDate = card.extractContentDesc_2(PointsHistoryLocators.PH_TRANS_DET_DATE_VAL, ",", 1);
+        String transactionDate = card.extractFromLabel("Date", PointsHistoryLocators.PH_TRANS_DET_DATE_VAL, "\n", 1);
         //System.out.println(transactionTitle);
         return transactionDate;
     }
@@ -281,7 +282,7 @@ public class PointsHistoryPage extends BasePage {
     public String getTransDateFromPointsHistoryList(String tranType){
         switch (tranType){
             case "ACE":
-                return card.extractFromContentDesc("Date - ACE", PointsHistoryLocators.PH_ITEM_ACE_AWD_DATE, ",", 1);
+                return getLabel(PointsHistoryLocators.PH_ITEM_ACE_AWD_DATE);
 
             default:
                 throw new IllegalArgumentException("Unknown transaction type: " + tranType);
@@ -292,21 +293,21 @@ public class PointsHistoryPage extends BasePage {
     public String getPointsValFromPointsHistoryList(String transactionType){
             switch (transactionType){
                 case "awd-ACE":
-                    return card.extractFromContentDesc("PH - + Point value", PointsHistoryLocators.PH_ITEM_ACE_AWD_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_ACE_AWD_PTS);
                 case "awd-LYBC":
-                    return card.extractFromContentDesc("PH - Points - LYBC", PointsHistoryLocators.PH_ITEM_LYBC_AWD_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_LYBC_AWD_PTS);
                 case "awd-TK":
-                    return card.extractFromContentDesc("PH - Points - TK", PointsHistoryLocators.PH_ITEM_TK_AWD_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_TK_AWD_PTS);
                 case "awd-MOM":
-                    return card.extractFromContentDesc("PH - Points - MOM", PointsHistoryLocators.PH_ITEM_MOM_AWD_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_MOM_AWD_PTS);
                 case "red-ACE":
-                    return card.extractFromContentDesc("PH - Points - ACE - Red", PointsHistoryLocators.PH_ITEM_ACE_RED_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_ACE_RED_PTS);
                 case "red-LYBC":
-                    return card.extractFromContentDesc("PH - Points - LYBC - Red", PointsHistoryLocators.PH_ITEM_LYBC_RED_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_LYBC_RED_PTS);
                 case "red-TK":
-                    return card.extractFromContentDesc("PH - Points - TK - Red", PointsHistoryLocators.PH_ITEM_TK_RED_PTS, ",", 1);
+                    return getLabel( PointsHistoryLocators.PH_ITEM_TK_RED_PTS);
                 case "red-MOM":
-                    return card.extractFromContentDesc("PH - Points - MOM - Red", PointsHistoryLocators.PH_ITEM_MOM_RED_PTS, ",", 1);
+                    return getLabel(PointsHistoryLocators.PH_ITEM_MOM_RED_PTS);
 
                 default:
                     throw new IllegalArgumentException("Unknown transaction type: " + transactionType);

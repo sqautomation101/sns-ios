@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: MOM Card Attribute
   Rule: Initial MOM card link
     Background:
@@ -10,7 +10,7 @@ Feature: MOM Card Attribute
       And the user clicks on Homepage Link Card
       And the user is on the card linking page
 
-      @high
+#      @high
       Scenario: MOM Card Registration Form Layout is displayed
         When the user enters a "AR" "MOM" "352" card number
         And a text container is visible
@@ -21,7 +21,7 @@ Feature: MOM Card Attribute
         And Card linking splash screen is displayed
         And the user is on the MOM Registration Form - "Initial link" - "MOM"
 
-        @high
+#        @high
         Scenario: MOM Card Registration Form - Address section layout is displayed
           When the user enters a "AR" "MOM" "352" card number
           And a text container is visible
@@ -146,13 +146,13 @@ Feature: MOM Card Attribute
         When the user enters "15,3" on Children ages field
         Then the entered children "ages" is displayed
 
-        @high
+#        @high
       Scenario: Proceed button is disabled when a field is left blank
         When the user enters a valid input for Address section
         And the user scrolls to Proceed button
         Then the Proceed button is "disabled"
 
-      @critical
+#      @critical
       Scenario: Clicking on Proceed will be redirected to Thank You screen
         When the user enters a valid input for Address section
         And the user scroll to Attribute section
@@ -182,7 +182,7 @@ Feature: MOM Card Attribute
       And the user clicks on Homepage Link Card
       And the user is on the card linking page
 
-      @critical
+#      @critical
       Scenario:  Card Linking -  MOM card - Text Container
         When the user enters a "AR" "MOM" "352" card number
         Then a text container is visible

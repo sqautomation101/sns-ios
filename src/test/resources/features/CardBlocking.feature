@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: Card Blocking
   Background:
     Given the user is on the SSO menu
@@ -11,7 +11,7 @@ Feature: Card Blocking
 #    And the user clicks on Homepage Link Card
 #    And the user is on the card linking page
 
-    @done1 @high
+#    @done1 @high
   Scenario: Verify that user can block SMAC Start card
 #    And the user enters a "BA" "Start" "822" card number
 #    And the user clicks on Link Your Card
@@ -42,7 +42,7 @@ Feature: Card Blocking
     And Show card is disabled
     And block card button is changed to Your card is blocked
 
-@done1 @high
+#@done1 @high
   Scenario: Verify that user can block SMAC card
     And the user enters a "AR" "SMAC" "878" card number
     And the user clicks on Link Your Card
@@ -73,7 +73,7 @@ Feature: Card Blocking
     And Show card is disabled
     And block card button is changed to Your card is blocked
 
-  @done1 @high
+#  @done1 @high
   Scenario: Verify that user can block SMAC Prestige card
     And the user enters a "AR" "Prestige" "002" card number
     And the user clicks on Link Your Card
@@ -172,7 +172,7 @@ Feature: Card Blocking
     And block card button is changed to Your card is blocked
 
 
-  @done1 @high
+#  @done1 @high
   Scenario: Verify that user can block LYBC card
     And the user enters a "BA" "LYBC" "404" card number
     And the user clicks on Link Your Card
@@ -204,7 +204,7 @@ Feature: Card Blocking
     And Show card is disabled
     And block card button is changed to Your card is blocked
 
-  @done1 @high
+#  @done1 @high
   Scenario: Verify that user can block ACE card
     And the user enters a "AR" "ACE" "505" card number
     And the user clicks on Link Your Card

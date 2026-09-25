@@ -103,6 +103,20 @@ public class LoginSteps {
         }
     }
 
+    @And("the user logs in using valid mobile number and password - Points History")
+    public void theUserLogsInUsingValidMobileNumberAndPasswordPointsHistory() {
+        try{
+            String uname = TestDataManager.getUsername("Bob Da Builder", "mobile");
+            String pword = TestDataManager.getPassword("Bob Da Builder");
+
+            login.verifySuccessfulLogin_SSOLoginOnly(uname, pword);
+
+            System.out.println("✅ Logged in successfully: Bob Da Builder - Points History");
+        } catch (Exception e) {
+            Assert.fail("❌ Test failed due to exception.", e);
+        }
+    }
+
     @And("the user logs in using valid mobile number and password - Card Link - {string}")
     public void theUserLogsInUsingValidMobileNumberAndPasswordCardLink(String name) {
         try{

@@ -93,7 +93,7 @@ public class DriverManager {
             XCUITestOptions options = new XCUITestOptions()
                     .setPlatformName("iOS")
                     .setAutomationName("XCUITest")
-                    .setUdid("F2E8376C-3F3E-4A74-B8F7-68449BD6F167")
+//                    .setUdid("00008030-00062D0111E2202E")
                     .setBundleId("com.dac.smacnshop")
                     .setDeviceName("iPhone 15")
                     .setPlatformVersion("18.6")

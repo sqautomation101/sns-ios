@@ -1,4 +1,4 @@
-@android
+@ios
 Feature: QR and Scan
   Background:
     Given the user is on the SSO menu

@@ -8,10 +8,9 @@ public final class HomepageLocators {
     private HomepageLocators() {}
 
     //Main card locators
-    public static final By CARDPOINTS_AND = AppiumBy.xpath("//*[contains(@content-desc, 'home_points_balance_')]");
+
     public static final By CARDPOINTS_IOS = AppiumBy.accessibilityId("home_points_balance");
-    public static final By CARDNUMBER_AND = AppiumBy.xpath("//*[contains(@content-desc, 'home_card_number_text_')]");
-    public static final By CARDNUMBER_IOS = AppiumBy.accessibilityId("home_card_number_text");
+    public static final By CARDNUMBER_IOS = AppiumBy.xpath("//XCUIElementTypeStaticText[@name=\"home_card_number_text\"]");
     public static final By RTP_MAINTAIN = AppiumBy.accessibilityId("Maintain Prestige");
     public static final By RTP_ORIGINAL = AppiumBy.accessibilityId("Road to Prestige");
     public static final By MANAGECARDSWIDGET = AppiumBy.accessibilityId("home_manage_cards_button");
@@ -48,6 +47,6 @@ public final class HomepageLocators {
     //Referal section TO BE REMOVED
     public static final By refer_hdr =  AppiumBy.accessibilityId("refer_friends_card_title");
     public static final  By refer_desc =   AppiumBy.accessibilityId("refer_friends_card_subtitle");
-    public static final By refer_copy =  AppiumBy.xpath("//*[@resource-id = 'refer_friends_card_code_button']");
+    public static final By refer_copy =  AppiumBy.accessibilityId("refer_friends_card_code_button");
     public static final By refer_share =  AppiumBy.accessibilityId("refer_friends_card_share_button");
 }

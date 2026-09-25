@@ -20,24 +20,26 @@ public class LoginPage extends BasePage {
 
 
     public boolean isSSOLoginVisible() {
-        waitUniqueElement(LoginLocators.LOGIN_BTN_AND, 30);
+        waitUniqueElement(LoginLocators.LOGIN_BTN_IOS, 30);
 
         boolean uname = isElementVisible("Username", LoginLocators.USERNAME_FIELD, timeout);
         boolean pword = isElementVisible("Password", LoginLocators.PASSWORD_FIELD, timeout);
-        boolean login = isElementVisible("Login", LoginLocators.LOGIN_BTN_AND, timeout);
+        boolean login = isElementVisible("Login", LoginLocators.LOGIN_BTN_IOS, timeout);
         boolean loginBack = isElementVisible("Login back", LoginLocators.LOGIN_BACK_BTN, timeout);
+        boolean loginDis = isElementVisible("Login Disable", LoginLocators.LOGIN_BTN_DIS, timeout);
 
         logStatus("SSO Login - Username", uname);
         logStatus("SSO Login - Password", pword);
         logStatus("SSO Login - Login back", loginBack);
         logStatus("SSO Login - Login btn", login);
+        logStatus("SSO Login - Login btn", loginDis);
 
         return uname & pword & login & loginBack;
     }
 
 
     public boolean isNewAcctRegModalVisible(){
-            waitUniqueElement(LoginLocators.NEW_REG_HEADER, 5);
+            waitUniqueElement(LoginLocators.NEW_REG_HEADER, 10);
 
             boolean newAcct_hdr = isElementVisible("New Account Registration", LoginLocators.NEW_REG_HEADER, timeout);
             logStatus("New Account Registration - Header", newAcct_hdr);
@@ -68,20 +70,20 @@ public class LoginPage extends BasePage {
 
 
     public void enterPassword(String password) {
-        waitUniqueElement(LoginLocators.PASSWORD_FIELD, timeout);
+        waitUniqueElement(LoginLocators.PASSWORD_FIELD, 30);
         tap("Password", LoginLocators.PASSWORD_FIELD, timeout);
         type("Password", LoginLocators.PASSWORD_FIELD, timeout, password);
     }
 
 
     public void clickOnFinalLoginButton() {
-        tap_Crossplatform("Login btn", LoginLocators.LOGIN_BTN_AND, LoginLocators.LOGIN_BTN_IOS, timeout);
+        tap_Crossplatform("Login btn", LoginLocators.LOGIN_BTN_IOS, LoginLocators.LOGIN_BTN_IOS, timeout);
     }
 
 
     public boolean isFinalLoginBtnEnable(int timeoutInSeconds) {
         try {
-            WebElement btn = waitForClickable_Crossplatform("Final Login Button", LoginLocators.LOGIN_BTN_AND, LoginLocators.LOGIN_BTN_IOS, timeoutInSeconds);
+            WebElement btn = waitForClickable_Crossplatform("Final Login Button", LoginLocators.LOGIN_BTN_DIS, LoginLocators.LOGIN_BTN_DIS, timeoutInSeconds);
             return Boolean.parseBoolean(btn.getAttribute("enabled"));
         } catch (TimeoutException e) {
             System.err.println("❌ Final Login Button not clickable after " + timeoutInSeconds + "s");

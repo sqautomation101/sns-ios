@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import hooks.*;
 import locators.QRAndScanLocators;
 import base.*;
+import org.w3c.dom.html.HTMLImageElement;
 
 public class QRandScanPage extends BasePage {
 
@@ -28,30 +29,6 @@ public class QRandScanPage extends BasePage {
     public void clickPayWithPoints() {
         tap("Pay With Points", QRAndScanLocators.QAS_PAY_WITH_POINTS, 15);
     }
-
-//    public boolean isQRPageDisplayed_NL() {
-//        waitUniqueElement(QRAndScanLocators.QAS_SHOW_BARCODE, 30);
-//
-//        boolean qr_hdr = isElementVisible("Header label", QRAndScanLocators.QAS_EARN_POINTS, 10);
-//        logStatus("QR - Header", qr_hdr);
-//
-//        boolean qr_cn = isElementVisible("QR card number", QRAndScanLocators.QAS_CARD_NUMBER, 10);
-//        logStatus("QR - Card number", qr_cn);
-//
-//        boolean qr_dateTime_nl = isElementVisible("QR - datetime", QRAndScanLocators.QAS_DATETIME_QR,10);
-//        logStatus("QR - Date-Time (NL)", qr_dateTime_nl);
-//
-//        boolean QRAndScanLocators.QAS_SHOW_QR = isElementVisible("Show QR", QRAndScanLocators.QAS_SHOW_QR, 10);
-//        logStatus("QR - Show QR", QRAndScanLocators.QAS_SHOW_QR);
-//
-//        boolean QRAndScanLocators.QAS_SHOW_BARCODE = isElementVisible("Show barcode", QRAndScanLocators.QAS_SHOW_BARCODE, 10);
-//        logStatus("QR - Show Barcode", QRAndScanLocators.QAS_SHOW_BARCODE);
-//
-//        boolean pwp = isElementVisible("Pay with points", QRAndScanLocators.QAS_PAY_WITH_POINTS,10);
-//        logStatus("QR - Pay With Points", pwp);
-//
-//        return qr_hdr & qr_cn & qr_dateTime_nl & QRAndScanLocators.QAS_SHOW_QR & QRAndScanLocators.QAS_SHOW_BARCODE & pwp;
-//    }
 
 
     public boolean isQRButtonsDisplayed(){
@@ -119,12 +96,16 @@ public class QRandScanPage extends BasePage {
 
 
     public String QAS_getTier(){
-        return card.verifyTier(QRAndScanLocators.QAS_CARD_NUMBER, ",", "-");
+        return card.verifyTier(QRAndScanLocators.QAS_CARD_NUMBER, "\n", "-");
     }
+
+
     public String getCardBIN_QAS(){
         waitUniqueElement(QRAndScanLocators.QAS_CARD_NUMBER, 60);
-        return card.verifyStatus(QRAndScanLocators.QAS_CARD_NUMBER, ",","-");
+//        return card.verifyStatus(QRAndScanLocators.QAS_CARD_NUMBER, ",","-");
+          return getLabel(QRAndScanLocators.QAS_CARD_NUMBER);
     }
+
 
 
     public boolean isLowerBannerVisiblePerTier_QAS() {

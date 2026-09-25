@@ -15,7 +15,7 @@ public final class QRAndScanLocators {
     public static final By QAS_PWP_INSTRUCTIONS = AppiumBy.accessibilityId("home_qr_scanner_instruction_text");
     public static final By QAS_PWP_SCANNER_CAM = AppiumBy.accessibilityId("home_qr_scanner_camera");
 
-    public static final By QAS_CARD_NUMBER = AppiumBy.xpath("//*[contains(@content-desc, 'card_number')]");
+    public static final By QAS_CARD_NUMBER = AppiumBy.xpath("//*[contains(@name, 'card_number')]");
 
     public static final By QAS_EARN_POINTS = AppiumBy.accessibilityId("home_qr_present_earn_points_text");
     public static final By QAS_DYNAMIC_QR = AppiumBy.accessibilityId("home_smac_qr");
