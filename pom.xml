@@ -13,7 +13,7 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<!--        <platform>ios</platform>-->
+        <!--        <platform>ios</platform>-->
 
         <allure.version>2.29.1</allure.version>
     </properties>
@@ -98,17 +98,17 @@
         </dependency>
 
         <!-- ExtentReports -->
-<!--        <dependency>-->
-<!--            <groupId>com.aventstack</groupId>-->
-<!--            <artifactId>extentreports</artifactId>-->
-<!--            <version>5.0.9</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.aventstack</groupId>-->
+        <!--            <artifactId>extentreports</artifactId>-->
+        <!--            <version>5.0.9</version>-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            <groupId>tech.grasshopper</groupId>-->
-<!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
-<!--            <version>1.14.0</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>tech.grasshopper</groupId>-->
+        <!--            <artifactId>extentreports-cucumber7-adapter</artifactId>-->
+        <!--            <version>1.14.0</version>-->
+        <!--        </dependency>-->
 
         <dependency>
             <groupId>org.json</groupId>
@@ -130,13 +130,13 @@
             <scope>test</scope>
         </dependency>
 
-<!--        So that we don't have to use Zero args constructor-->
+        <!--        So that we don't have to use Zero args constructor-->
         <!-- Picocontainer DI for constructor injection -->
         <dependency>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-picocontainer</artifactId>
-        <version>7.14.0</version>
-        <scope>test</scope>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>7.14.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>

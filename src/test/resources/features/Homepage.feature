@@ -58,7 +58,7 @@ Feature: Homepage
           And the user clicks the Home navigation
           Then the virtual card number is masked
 
-          @low @failed
+          @low
         Scenario: Masked behaviour is retained upon logging out and logging back in via virtual card number
           And the user is on the Homepage
           Given the virtual card number is masked

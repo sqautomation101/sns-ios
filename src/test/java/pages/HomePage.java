@@ -108,12 +108,12 @@ public class HomePage extends BasePage {
 
 
     public void clickCardNumber() {
-        isElementVisible("Prismic", HomepageLocators.PRISMIC, 30);
+//        isElementVisible("Prismic", HomepageLocators.PRISMIC, 30);
         tap("Card number", HomepageLocators.CARDNUMBER_IOS, 10);
     }
 
     public String extractCardNumber() {
-        return card.extractCardNumber(HomepageLocators.CARDNUMBER_IOS, 4);
+        return card.extractFromLabel("CardNumber", HomepageLocators.CARDNUMBER_IOS, "home_card_number_text_" , 1 );
     }
 
 
