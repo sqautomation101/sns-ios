@@ -41,7 +41,7 @@ Feature: Manage Cards
             When user reads main card number
             Then "Start" card is displayed
 
-#            @high
+            @high
           Scenario: QR Code - Card number matches with the linked physical card - Start
             #And the card is displayed
             And user reads main card number

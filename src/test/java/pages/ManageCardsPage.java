@@ -3,6 +3,7 @@ package pages;
 import hooks.Hooks;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
+import locators.PointsHistoryLocators;
 import org.openqa.selenium.WebElement;
 
 //import packages
@@ -248,7 +249,7 @@ public class ManageCardsPage extends BasePage {
 
 
     public String cleanCardNumber(String delimiterCN){
-        return card.cleanCardNumber("Card number main", ManageCardsLocators.MC_MAIN_CARD_NUMBER, delimiterCN);
+        return card.extractFromLabel("Card number main", ManageCardsLocators.MC_MAIN_CARD_NUMBER, "\n", 1);
     }
 
 
@@ -258,7 +259,8 @@ public class ManageCardsPage extends BasePage {
 
 
     public String extractMC_CN(){
-        return card.extractAndNormaliseCardNumber_(ManageCardsLocators.MC_MAIN_CARD_NUMBER);
+        return card.extractFromLabel("Card number main", ManageCardsLocators.MC_MAIN_CARD_NUMBER, "\n", 1);
+//        return card.extractAndNormaliseCardNumber_(ManageCardsLocators.MC_MAIN_CARD_NUMBER);
     }
 
 
