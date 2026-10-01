@@ -15,7 +15,7 @@ public final class CardLinkingLocators {
     public static final By CARD_LINKING_HDR = AppiumBy.accessibilityId("card_linking_title");
     public static final By CARD_LINKING_IMG = AppiumBy.accessibilityId("card_linking_partner_cards_image");
     public static final By CARD_LINKING_DESC = AppiumBy.accessibilityId("card_linking_activation_reminder_text");
-    public static final By CARD_NUM_FIELD = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"card_linking_card_number_field\"]");
+    public static final By CARD_NUM_FIELD = AppiumBy.accessibilityId("card_linking_card_number_field");
     public static final By LINK_BTN = AppiumBy.accessibilityId("card_linking_link_card_button");
     public static final By CARD_LINKING_BACK = AppiumBy.accessibilityId("card_linking_back_button");
     public static final By MOM_TERMS_OF_SERVICE = AppiumBy.accessibilityId("Terms of Service");

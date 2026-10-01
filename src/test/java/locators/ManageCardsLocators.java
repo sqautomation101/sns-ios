@@ -32,7 +32,7 @@ public final class ManageCardsLocators {
     public static final By MC_SHOWCARD_DYNAMIC_QR =  AppiumBy.accessibilityId("dynamic_qr_code");
     public static final By MC_SHOWCARD_DYNAMIC_BC =  AppiumBy.accessibilityId("dynamic_barcode");
     public static final By MC_SHOWCARD_QRBC_DATETIME =  AppiumBy.accessibilityId("dynamic_qr_timestamp");
-    public static final By MC_SHOWCARD_QRBC_CN =   AppiumBy.xpath("//*[contains(@content-desc,'dynamic_card_number')]");
+    public static final By MC_SHOWCARD_QRBC_CN =   AppiumBy.accessibilityId("dynamic_card_number, 8880-8220-1003-4086");
 
     //Points transfer page
     public static final By MC_PT_HDR = AppiumBy.accessibilityId("points_transfer_title");
@@ -43,7 +43,7 @@ public final class ManageCardsLocators {
     public static final By MC_PT_DONE = AppiumBy.accessibilityId("points_transfer_done_button");
 
     //Card container for Card carousel
-    public static final By MC_CARD_CONTAINER = AppiumBy.xpath("//*[contains(@content-desc,'manage_cards_smac_card')]");
+    public static final By MC_CARD_CONTAINER = AppiumBy.accessibilityId("manage_cards_smac_card");
     public static final By MC_SCRIM = AppiumBy.accessibilityId("Scrim");
 
     //CARD CONTENTS
@@ -51,7 +51,7 @@ public final class ManageCardsLocators {
     public static final By MC_CARD_DISPLAY_NAME = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_display_name')]");
     public static final By MC_CARD_VIRTUAL_NUM = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_virtual_card_number')]");
     public static final By MC_CARD_TYPE = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_card_type')]");
-    public static final By MC_MAIN_CARD_NUMBER = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_card_number')]");
+    public static final By MC_MAIN_CARD_NUMBER = AppiumBy.accessibilityId("manage_cards_card_number_8880 8220 1003 4086");
     public static final By MC_CARD_MEMBER_SINCE = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_member_since')]");
     public static final By MC_CARD_BADGE = AppiumBy.xpath("//*[contains(@content-desc, 'manage_cards_expiry_badge')]");
     public static final By MC_CLAIM_PRESTIGE_BTN = AppiumBy.accessibilityId("manage_cards_claim_prestige_button");
